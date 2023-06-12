@@ -1,0 +1,499 @@
+{
+  "uuid": "dbc7bd20-4095-4205-af5d-a76457dfaf68",
+  "lastMigration": 27,
+  "name": "Wanderbackend",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "50a2a52f-3541-4246-b729-4b70f1b12f28",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "destination/popular",
+      "responses": [
+        {
+          "uuid": "dd21a8e6-4421-4754-8a51-01cc48418bfe",
+          "body": "{\n  \"pagination\": {\n    \"page\": 1,\n    \"perPage\": 10,\n    \"total\": 2\n  },\n  \"popularDestinations\": [\n    {\n      \"id\": \"fetKit5DOgWpT92bz3kkWH1\",\n      \"name\": \"Hanifaru bay\",\n      \"country\": \"Maldives\",\n      \"isFavourite\": true,\n      \"imageLink\": \"https://www.blueforcefleet.com/wp-content/uploads/bahia-de-hanifaru.jpg\",\n      \"categories\": [\n        {\n          \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH2\",\n          \"category\": \"Beach\"\n        },\n        {\n          \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH3\",\n          \"category\": \"Ocean\"\n        }\n      ]\n    },\n    {\n      \"id\": \"fetKit5DOgWpT92bz3kkWH2\",\n      \"name\": \"Santorini\",\n      \"country\": \"Greece\",\n      \"isFavourite\": true,\n      \"imageLink\": \"https://www.state.gov/wp-content/uploads/2018/11/Greece-2560x1300.jpg\",\n      \"categories\": [\n        {\n          \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH2\",\n          \"category\": \"Beach\"\n        },\n        {\n          \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH3\",\n          \"category\": \"Ocean\"\n        }\n      ]\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "816c0848-92d8-49b3-8337-0cf7bfa8157f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "",
+              "invert": false,
+              "operator": "null"
+            },
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "Bearer 123123123",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "16035479-39e9-4593-a7a7-96c2ef5fbc23",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "categories",
+      "responses": [
+        {
+          "uuid": "de272c70-92b8-44d5-88e8-30283d15c9be",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "alua",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "94c9f467-3802-4685-be61-ff9ccb5504c7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "1264a380-0587-4504-8326-e4ab7c2d1b0a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "destination/preplanned",
+      "responses": [
+        {
+          "uuid": "0175f162-39f4-40e2-b4d6-7a3127038be3",
+          "body": "{\n  \"pagination\": {\n    \"page\": 1,\n    \"perPage\": 10,\n    \"total\": 2\n  },\n  \"preplannedDestinations\": [\n    {\n      \"id\": \"fetKit5DOgWpT92bz3kkWH1\",\n      \"country\": \"Maldives\",\n      \"imageLink\": \"https://www.blueforcefleet.com/wp-content/uploads/bahia-de-hanifaru.jpg\"\n      \n    },\n    {\n      \"id\": \"fetKit5DOgWpT92bz3kkWH2\",\n      \"name\": \"Santorini\",\n      \"country\": \"Greece\",\n      \"imageLink\": \"https://www.state.gov/wp-content/uploads/2018/11/Greece-2560x1300.jpg\"\n      \n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "ba9f570f-6aa8-401c-a17f-e7fa914b3977",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "",
+              "invert": false,
+              "operator": "null"
+            },
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "Bearer 123123123",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "b3449cdf-8c71-4065-9360-aeff4b1740ff",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "destination/preplanned/:id",
+      "responses": [
+        {
+          "uuid": "a003a71c-e888-4c27-a65b-5f8d412be44e",
+          "body": "{\n  \"averageNumberofDays\": 7,\n  \"approximateBudget\": 500,\n  \"season\": \"Nov - Feb\",\n  \"images\": [\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1566296314736-6eaac1ca0cb9\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1574611122955-5baa61496637\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1571406761758-9a3eed5338ef\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1612862862126-865765df2ded\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1531201890865-fb64780d16e9\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1537551080512-fb7dd14fbf90\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1544015759-237f87d55ef3\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1609681980718-340e7f4b11d7\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1561426802-392f5b6290cf\",\n    \"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1623595289196-007a22dd8560\"\n  ],\n  \"articles\": [\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"Forbes\"\n      },\n      \"author\": \"Judy Koutsky, Contributor, \\n Judy Koutsky, Contributor\\n https://www.forbes.com/sites/judykoutsky/\",\n      \"title\": \"Travel Sustainability In Sri Lanka: How To Make A Difference\",\n      \"description\": \"In Sri Lanka, it’s a delicate balance between thriving tourism and protecting the land and people on it.\",\n      \"url\": \"https://www.forbes.com/sites/judykoutsky/2023/06/06/travel-sustainability-in-sri-lanka-how-to-make-a-difference/\",\n      \"urlToImage\": \"https://imageio.forbes.com/specials-images/imageserve/647fa1b9e7cfe43945595934/0x0.jpg?format=jpg&width=1200\",\n      \"publishedAt\": \"2023-06-06T21:38:37Z\",\n      \"content\": \"In Sri Lanka, elephant and human interaction can present challenges. \\r\\ngetty\\r\\nThe travel industry canand often doesplay a large role in sustainability in countries across the world. In a country like… [+5643 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"NPR\"\n      },\n      \"author\": \"Nurith Aizenman\",\n      \"title\": \"A dilemma for dozens of countries: Fund your schools and hospitals or pay your debt\",\n      \"description\": \"There's a looming debt crisis in many lower income countries. Low interest rates a few years back started the cycle. Then came a series of once in a generation shocks. Is there a solution?\",\n      \"url\": \"https://www.npr.org/sections/goatsandsoda/2023/05/23/1177579336/a-dilemma-for-dozens-of-countries-fund-your-schools-and-hospitals-or-pay-your-de\",\n      \"urlToImage\": \"https://media.npr.org/assets/img/2023/05/23/gettyimages-1247224154_wide-7a1dcc396cf1534164347b3cf5dde6607ac32772-s1400-c100.jpg\",\n      \"publishedAt\": \"2023-05-23T16:59:56Z\",\n      \"content\": \"A vendor in a market in Nigeria counts local bills. The country is one of dozens whose devalued currency is fueling a debt crisis.\\r\\nPius Utomi Ekpei /AFP via Getty Images\\r\\nNigeria is now spending 96%… [+8228 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"Yahoo Entertainment\"\n      },\n      \"author\": \"KRISHAN FRANCIS\",\n      \"title\": \"Sri Lanka reduces interest rates for 1st time since bankruptcy as economy shows signs of rebounding\",\n      \"description\": \"The Central Bank of Sri Lanka reduced its interest rates Thursday for the first time since the island nation declared bankruptcy, after stern fiscal controls...\",\n      \"url\": \"https://finance.yahoo.com/news/sri-lanka-reduces-interest-rates-055537041.html\",\n      \"urlToImage\": \"https://s.yimg.com/ny/api/res/1.2/1mUF3aDyLnWIhgyx51fWLw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/ap_finance_articles_694/0e82be451b8725a59b6639f21a490805\",\n      \"publishedAt\": \"2023-06-01T05:55:37Z\",\n      \"content\": \"COLOMBO, Sri Lanka (AP) The Central Bank of Sri Lanka reduced its interest rates Thursday for the first time since the island nation declared bankruptcy, after stern fiscal controls, improved foreign… [+2139 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"Yahoo Entertainment\"\n      },\n      \"author\": \"KRISHAN FRANCIS\",\n      \"title\": \"Sri Lanka reduces interest rates for 1st time since bankruptcy as economy shows signs of rebounding\",\n      \"description\": \"The Central Bank of Sri Lanka reduced its interest rates Thursday for the first time since the island nation declared bankruptcy, after stern fiscal controls...\",\n      \"url\": \"https://news.yahoo.com/sri-lanka-reduces-interest-rates-055537630.html\",\n      \"urlToImage\": \"https://s.yimg.com/ny/api/res/1.2/TXwALmyT9ry_oZnoUtWdkg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/ap.org/5f67da0f3824f35e4d46ae95a71b172a\",\n      \"publishedAt\": \"2023-06-01T05:55:37Z\",\n      \"content\": \"COLOMBO, Sri Lanka (AP) The Central Bank of Sri Lanka reduced its interest rates Thursday for the first time since the island nation declared bankruptcy, after stern fiscal controls, improved foreign… [+2139 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": \"independent\",\n        \"name\": \"Independent\"\n      },\n      \"author\": \"Krishan Francis\",\n      \"title\": \"Sri Lanka reduces interest rates for 1st time since bankruptcy as economy shows signs of rebounding\",\n      \"description\": \"Sri Lanka’s Central Bank has reduced its interest rates for the first time since the island nation declared bankruptcy last year\",\n      \"url\": \"https://www.independent.co.uk/news/sri-lanka-ap-international-monetary-fund-colombo-gotabaya-rajapaksa-b2349415.html\",\n      \"urlToImage\": \"https://static.independent.co.uk/2023/06/01/07/Sri_Lanka_Economic_Crisis_54545.jpg?quality=75&width=1200&auto=webp\",\n      \"publishedAt\": \"2023-06-01T05:55:38Z\",\n      \"content\": \"For free real time breaking news alerts sent straight to your inbox sign up to our breaking news emails\\r\\nSign up to our free breaking news emails\\r\\nThe Central Bank of Sri Lanka reduced its interest r… [+2267 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"Moneycontrol\"\n      },\n      \"author\": \"Reuters\",\n      \"title\": \"Sri Lanka expects FDI to jump to $1.3 billion with India taking lead\",\n      \"description\": \"Part of the bump came from India, which wants to keep China#39;s expansion in its neighbour in check. India#39;s Adani group signed up for two wind power plants worth $442 million last year.\",\n      \"url\": \"https://www.moneycontrol.com/news/world/sri-lanka-expects-fdi-to-jump-to-1-3-billion-with-india-taking-lead-10654401.html\",\n      \"urlToImage\": \"https://images.moneycontrol.com/static-mcnews/2022/12/FDI-770x433.jpg\",\n      \"publishedAt\": \"2023-05-24T13:20:30Z\",\n      \"content\": \"Sri Lanka is expecting foreign direct investment inflows to rise by a fifth to $1.3 billion this year, a government official said on Wednesday, with India likely to play a lead role despite the Sri L… [+1756 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"Yahoo Entertainment\"\n      },\n      \"author\": \"Karl Lester M. Yap\",\n      \"title\": \"Sri Lanka Rupee’s Rally May Falter as 16% Slide Seen on Horizon\",\n      \"description\": \"(Bloomberg) -- After topping global currency rankings this year, analysts are predicting tough times ahead for the Sri Lankan rupee as the government eases...\",\n      \"url\": \"https://finance.yahoo.com/news/sri-lanka-rupee-rally-may-041442176.html\",\n      \"urlToImage\": \"https://media.zenfs.com/en/bloomberg_markets_842/1df0bb8c0d5821a56a5747242116e219\",\n      \"publishedAt\": \"2023-05-31T04:14:42Z\",\n      \"content\": \"(Bloomberg) -- After topping global currency rankings this year, analysts are predicting tough times ahead for the Sri Lankan rupee as the government eases import restrictions and debt repayments loo… [+2297 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"Yahoo Entertainment\"\n      },\n      \"author\": \"Uditha Jayasinghe\",\n      \"title\": \"Sri Lanka central bank to hold rates as inflation stays high\",\n      \"description\": \"Sri Lanka's central bank is expected to keep rates unchanged at its policy meeting this week as it continues to support the debt-laden economy amid...\",\n      \"url\": \"https://finance.yahoo.com/news/sri-lanka-central-bank-hold-080307291.html\",\n      \"urlToImage\": \"https://media.zenfs.com/en/reuters-finance.com/4a1ad9c58a99939369a0c01630fcb5c0\",\n      \"publishedAt\": \"2023-05-30T08:03:07Z\",\n      \"content\": \"By Uditha Jayasinghe\\r\\nCOLOMBO (Reuters) - Sri Lanka's central bank is expected to keep rates unchanged at its policy meeting this week as it continues to support the debt-laden economy amid persisten… [+2756 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"Bangkok Post\"\n      },\n      \"author\": \"Mongkol Bangprapa\",\n      \"title\": \"Sri Lanka PM hails ties on Vesak Day\",\n      \"description\": \"Prime Minister Prayut Chan-o-cha on Wednesday welcomed Prime Minister of Sri Lanka Dinesh Gunawardena on his official visit to the kingdom and congratulated the country for its speedy economic recovery, said government spokesman Anucha Burapachaisri.\",\n      \"url\": \"https://www.bangkokpost.com/thailand/general/2582549/sri-lanka-pm-hails-ties-on-vesak-day\",\n      \"urlToImage\": \"https://static.bangkokpost.com/media/content/20230601/c1_2582549_230601054244_700.jpg\",\n      \"publishedAt\": \"2023-05-31T22:12:00Z\",\n      \"content\": \"Prime Minister Prayut Chan-o-cha on Wednesday welcomed Prime Minister of Sri Lanka Dinesh Gunawardena on his official visit to the kingdom and congratulated the country for its speedy economic recove… [+2032 chars]\"\n    },\n    {\n      \"source\": {\n        \"id\": null,\n        \"name\": \"Skift\"\n      },\n      \"author\": \"Skift\",\n      \"title\": \"India Daily: Aviation Ministry to Airlines – Watch “Abnormal Surge Pricing”\",\n      \"description\": \"Airfares in India are going through the roof bang in the middle of the country’s peak summer travel season. Is any respite in the near term likely? \\n -Amrita Ghosh\",\n      \"url\": \"https://skift.com/2023/06/07/india-daily-aviation-ministry-to-airlines-watch-abnormal-surge-pricing/\",\n      \"urlToImage\": \"https://skift.com/wp-content/uploads/2023/05/india-flights-lineup.jpg\",\n      \"publishedAt\": \"2023-06-08T03:00:00Z\",\n      \"content\": \"Amid the surge in domestic airfares, Indias Civil Aviation Minister Jyotiraditya Scindia asked airlines to self-monitor the prices on certain routes, particularly the ones that have been most affecte… [+6062 chars]\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "9860915c-9436-47d6-8170-246857e9d16a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "",
+              "invert": false,
+              "operator": "null"
+            },
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "Bearer 123123123",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "b7c14385-4e75-4b5f-b5a7-a50f1efc7e2d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "user",
+      "responses": [
+        {
+          "uuid": "2e6fe7f7-e46c-4d60-b3fd-0c1f19e1d402",
+          "body": "{\n  \"firstName\": \"Pasindu\",\n  \"lastName\": \"Gurusinghe\",\n  \"country\": \"Sri Lanka\",\n  \"userCurrancy\": \"LKR\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "42bd098e-c71a-4b0e-8cb0-6723167ad7a7",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "personalpreferences",
+      "responses": [
+        {
+          "uuid": "7f04d0f1-9e89-436a-bd1a-0f397ba3baf7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "alua",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "ab208f61-db28-4541-b33b-193c605185de",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "13cee4a3-4982-46be-90b3-2070c68e6ed0",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "destination/preplanned/:id/budget",
+      "responses": [
+        {
+          "uuid": "7a48a3b4-3062-42bb-87bd-9db9d1398c1f",
+          "body": "[\n  {\n    \"expenseCategory\": \"Accommodoation\",\n    \"icon\": \"Icons.favorite\",\n    \"points\": [\n      {\n        \"key\": \"Mid - range hotel\",\n        \"seperator\": \":\",\n        \"value\": \"SGD 900 - SGD 1,500 for three night\"\n      }\n    ],\n    \"pointer\": [\n      \"bullet\"\n    ]\n  },\n  {\n    \"expenseCategory\": \"Transportation\",\n    \"icon\": \"Icons.audiotrack\",\n    \"points\": [\n      {\n        \"key\": \"Mid - range hotel\",\n        \"seperator\": \":\",\n        \"value\": \"SGD 900 - SGD 1,500 for three night\"\n      },\n      {\n        \"key\": \"Airport transfers\",\n        \"seperator\": \":\",\n        \"value\": \"SGD 50 - SGD 100 for three night\"\n      },\n      {\n        \"key\": \"Local transportion\",\n        \"seperator\": \":\",\n        \"value\": \"SGD 60 - SGD 90 for three night\"\n      }\n    ],\n    \"pointer\": [\n      \"bullet\"\n    ]\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "4cd97435-2deb-444d-850d-9893983f7698",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "",
+              "invert": false,
+              "operator": "null"
+            },
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "Bearer 123123123",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "6b5190af-090c-4a59-bd14-20d9c8610cd1",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "8b60e314-1923-48e1-a32f-7bbd0c9187c4",
+          "body": "{\n  \"budget\":\"500\",\n  \"plan\":[{\n    \"day\":\"Day 1\",\n    \"icon\": \"Icons.favorite\",\n    \"start\":\"Singapore Sentral\",\n    \"startTime\":\"10:00 am\"\n    \"bookingStatus\":[\"Pending\"],\n    \"duration\":\"36 Min\",\n    \"mode\":\"Train\",\n    \"Frequency\":\"\"\n    \n  }]\n  \n  \n  \n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "50a2a52f-3541-4246-b729-4b70f1b12f28"
+    },
+    {
+      "type": "route",
+      "uuid": "16035479-39e9-4593-a7a7-96c2ef5fbc23"
+    },
+    {
+      "type": "route",
+      "uuid": "1264a380-0587-4504-8326-e4ab7c2d1b0a"
+    },
+    {
+      "type": "route",
+      "uuid": "b3449cdf-8c71-4065-9360-aeff4b1740ff"
+    },
+    {
+      "type": "route",
+      "uuid": "b7c14385-4e75-4b5f-b5a7-a50f1efc7e2d"
+    },
+    {
+      "type": "route",
+      "uuid": "42bd098e-c71a-4b0e-8cb0-6723167ad7a7"
+    },
+    {
+      "type": "route",
+      "uuid": "13cee4a3-4982-46be-90b3-2070c68e6ed0"
+    },
+    {
+      "type": "route",
+      "uuid": "6b5190af-090c-4a59-bd14-20d9c8610cd1"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "61658045-af57-402f-96b4-f1dda7100075",
+      "id": "alua",
+      "name": "categories",
+      "documentation": "categories data",
+      "value": "[\n            {\n                \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH2\",\n                \"category\": \"Beach\",\n                \"isPopularDestination\":true\n            },\n            {\n                \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH3\",\n                \"category\": \"Ocean\",\n                \"isPopularDestination\":true\n            }\n]"
+    },
+    {
+      "uuid": "eb795b94-e72d-4a69-b11b-c0924a19a2c8",
+      "id": "nkj7",
+      "name": "Personal preferences",
+      "documentation": "",
+      "value": ""
+    }
+  ]
+}
