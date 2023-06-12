@@ -36,38 +36,6 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true
-        },
-        {
-          "uuid": "758ab229-ff6f-4d81-9cb7-db4b27d1ca1a",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 401,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "header",
-              "modifier": "Authorization",
-              "value": "",
-              "invert": false,
-              "operator": "null"
-            },
-            {
-              "target": "header",
-              "modifier": "Authorization",
-              "value": "Bearer 123123123",
-              "invert": true,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false
         }
       ],
       "enabled": true,
@@ -101,38 +69,6 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true
-        },
-        {
-          "uuid": "d09e2f04-ab87-45f8-ae6a-837b10871a78",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 401,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "header",
-              "modifier": "Authorization",
-              "value": "",
-              "invert": false,
-              "operator": "null"
-            },
-            {
-              "target": "header",
-              "modifier": "Authorization",
-              "value": "Bearer 123123123",
-              "invert": true,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false
         }
       ],
       "enabled": true,
@@ -166,38 +102,6 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true
-        },
-        {
-          "uuid": "40b47ad1-0f2a-4679-8ba0-f8ed13ae3ff8",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 401,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "header",
-              "modifier": "Authorization",
-              "value": "",
-              "invert": false,
-              "operator": "null"
-            },
-            {
-              "target": "header",
-              "modifier": "Authorization",
-              "value": "Bearer 123123123",
-              "invert": true,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false
         }
       ],
       "enabled": true,
@@ -259,38 +163,6 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true
-        },
-        {
-          "uuid": "7497c7d2-07b6-4754-875e-7759466bfa20",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 401,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "header",
-              "modifier": "Authorization",
-              "value": "",
-              "invert": false,
-              "operator": "null"
-            },
-            {
-              "target": "header",
-              "modifier": "Authorization",
-              "value": "Bearer 123123123",
-              "invert": true,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false
         }
       ],
       "enabled": true,
