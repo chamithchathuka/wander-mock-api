@@ -277,51 +277,6 @@
       "responseMode": null
     },
     {
-      "uuid": "42bd098e-c71a-4b0e-8cb0-6723167ad7a7",
-      "type": "crud",
-      "documentation": "",
-      "method": "",
-      "endpoint": "personalpreferences",
-      "responses": [
-        {
-          "uuid": "7f04d0f1-9e89-436a-bd1a-0f397ba3baf7",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "DATABUCKET",
-          "filePath": "",
-          "databucketID": "alua",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true
-        },
-        {
-          "uuid": "ab208f61-db28-4541-b33b-193c605185de",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false
-        }
-      ],
-      "enabled": true,
-      "responseMode": null
-    },
-    {
       "uuid": "13cee4a3-4982-46be-90b3-2070c68e6ed0",
       "type": "http",
       "documentation": "",
@@ -435,10 +390,6 @@
     {
       "type": "route",
       "uuid": "b7c14385-4e75-4b5f-b5a7-a50f1efc7e2d"
-    },
-    {
-      "type": "route",
-      "uuid": "42bd098e-c71a-4b0e-8cb0-6723167ad7a7"
     },
     {
       "type": "route",
