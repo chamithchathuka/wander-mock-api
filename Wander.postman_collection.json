@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "4ca84b70-0679-447d-b9fb-f4b2f8241fd2",
+		"name": "Wander",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "get preplanned - under dev DO NOT USE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjY3YmFiYWFiYTEwNWFkZDZiM2ZiYjlmZjNmZjVmZTNkY2E0Y2VkYTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZXQtYm9zcy1mbHV0dGVyLWRlbW8iLCJhdWQiOiJldC1ib3NzLWZsdXR0ZXItZGVtbyIsImF1dGhfdGltZSI6MTY4NzE4Nzg3NiwidXNlcl9pZCI6IjdQbE93bHpvRUROMFNnaTRzWXdsejFYUDY4cTEiLCJzdWIiOiI3UGxPd2x6b0VETjBTZ2k0c1l3bHoxWFA2OHExIiwiaWF0IjoxNjg3MTg3ODc2LCJleHAiOjE2ODcxOTE0NzYsImVtYWlsIjoiY2hhbWl0aEBjaGFtaXRoLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJjaGFtaXRoQGNoYW1pdGguY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.UTp-SmRQKOMfnCIwVpRXSrY3eJMMivHhQpbNo1RHLoCVOLYTHLvUV0Cw4q9UIa8JmmkLL4A4p13iRtC_d_jI-7xCcRoVReqINpVungNPCNdNpD_xztctteqm3MbYKBhYPcCQOVFreImzvKIQOrwyzUkpbNsGmYq0DR_VSTU3piZaunuEm5wLj_ZyDt266pWruDLCzuIdjagEXeK_Ym7ZFe1m_GB_v_1peV3f8s4OZNyMJR8XAEaSO1xvfLFkfs_vmMlk4rWAza9QQO-gsMJaR5MEmUOOsSQW_By1y6zg8pfSN-yfE-X5APi3UhJp8RFKCcULBPSWAqV5sGgkF3tqRA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"to\": \"Sri Lanka\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/destinations/preplanned",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"destinations",
+								"preplanned"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "popular destinations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "123123123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/destination/popular",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"destination",
+								"popular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "123123123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/categories",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "destination preplanned",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "123123123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/destination/preplanned/2",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"destination",
+						"preplanned",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destination preplanned Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "123123123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/destination/preplanned/2",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"destination",
+						"preplanned",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destination/preplanned/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "123123123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/destination/preplanned",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"destination",
+						"preplanned"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destination/preplanned/:id/budget",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "123123123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/destination/preplanned/2/budget",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"destination",
+						"preplanned",
+						"2",
+						"budget"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plan trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjY3YmFiYWFiYTEwNWFkZDZiM2ZiYjlmZjNmZjVmZTNkY2E0Y2VkYTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZXQtYm9zcy1mbHV0dGVyLWRlbW8iLCJhdWQiOiJldC1ib3NzLWZsdXR0ZXItZGVtbyIsImF1dGhfdGltZSI6MTY4NzE4Nzg3NiwidXNlcl9pZCI6IjdQbE93bHpvRUROMFNnaTRzWXdsejFYUDY4cTEiLCJzdWIiOiI3UGxPd2x6b0VETjBTZ2k0c1l3bHoxWFA2OHExIiwiaWF0IjoxNjg3MTg3ODc2LCJleHAiOjE2ODcxOTE0NzYsImVtYWlsIjoiY2hhbWl0aEBjaGFtaXRoLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJjaGFtaXRoQGNoYW1pdGguY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.UTp-SmRQKOMfnCIwVpRXSrY3eJMMivHhQpbNo1RHLoCVOLYTHLvUV0Cw4q9UIa8JmmkLL4A4p13iRtC_d_jI-7xCcRoVReqINpVungNPCNdNpD_xztctteqm3MbYKBhYPcCQOVFreImzvKIQOrwyzUkpbNsGmYq0DR_VSTU3piZaunuEm5wLj_ZyDt266pWruDLCzuIdjagEXeK_Ym7ZFe1m_GB_v_1peV3f8s4OZNyMJR8XAEaSO1xvfLFkfs_vmMlk4rWAza9QQO-gsMJaR5MEmUOOsSQW_By1y6zg8pfSN-yfE-X5APi3UhJp8RFKCcULBPSWAqV5sGgkF3tqRA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"preferredTransportMode\": \"flight\",\r\n  \"origin\": \"Singapore\",\r\n  \"destinations\": [\"Maldives\"],\r\n  \"departureTime\": \"20th Friday 9:30 PM\",\r\n  \"returnTime\": \"29th Sunday 11:00 PM\",\r\n  \"considerTrafficConditions\": true,\r\n  \"budget\": 3000,\r\n  \"relaxedSchedule\": false,\r\n  \"personalPreferences\": [\"nature lover\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/travel/plan",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"travel",
+						"plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get travel modes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjY3YmFiYWFiYTEwNWFkZDZiM2ZiYjlmZjNmZjVmZTNkY2E0Y2VkYTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZXQtYm9zcy1mbHV0dGVyLWRlbW8iLCJhdWQiOiJldC1ib3NzLWZsdXR0ZXItZGVtbyIsImF1dGhfdGltZSI6MTY4NzE4Nzg3NiwidXNlcl9pZCI6IjdQbE93bHpvRUROMFNnaTRzWXdsejFYUDY4cTEiLCJzdWIiOiI3UGxPd2x6b0VETjBTZ2k0c1l3bHoxWFA2OHExIiwiaWF0IjoxNjg3MTg3ODc2LCJleHAiOjE2ODcxOTE0NzYsImVtYWlsIjoiY2hhbWl0aEBjaGFtaXRoLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJjaGFtaXRoQGNoYW1pdGguY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.UTp-SmRQKOMfnCIwVpRXSrY3eJMMivHhQpbNo1RHLoCVOLYTHLvUV0Cw4q9UIa8JmmkLL4A4p13iRtC_d_jI-7xCcRoVReqINpVungNPCNdNpD_xztctteqm3MbYKBhYPcCQOVFreImzvKIQOrwyzUkpbNsGmYq0DR_VSTU3piZaunuEm5wLj_ZyDt266pWruDLCzuIdjagEXeK_Ym7ZFe1m_GB_v_1peV3f8s4OZNyMJR8XAEaSO1xvfLFkfs_vmMlk4rWAza9QQO-gsMJaR5MEmUOOsSQW_By1y6zg8pfSN-yfE-X5APi3UhJp8RFKCcULBPSWAqV5sGgkF3tqRA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n  \"to\": \"Mexico\",\r\n  \"from\":\"Singapore\"\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/travel/modes",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"travel",
+						"modes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "34.145.45.139:80",
+			"type": "default"
+		}
+	]
+}

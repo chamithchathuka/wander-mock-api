@@ -368,6 +368,95 @@
       ],
       "enabled": true,
       "responseMode": null
+    },
+    {
+      "uuid": "55098280-20c3-4a23-ac4a-7bb2986d0486",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "travel/plan",
+      "responses": [
+        {
+          "uuid": "25d45b7f-417f-4f24-a0bb-09545f27dbe3",
+          "body": "{\n  \"plan\": [\n    {\n      \"day\": \"Day 1\",\n      \"activities\": [\n        {\n          \"activity\": \"Arrival in Singapore\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Check-in at the hotel\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a seafood restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 2\",\n      \"activities\": [\n        {\n          \"activity\": \"Visit Gardens by the Bay\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Explore Marina Bay Sands\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Lunch at a local hawker center\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Visit Singapore Botanic Gardens\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a vegetarian restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 3\",\n      \"activities\": [\n        {\n          \"activity\": \"Visit Sentosa Island\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Enjoy the beaches and water sports\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Lunch at a beachside restaurant\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Visit Universal Studios Singapore\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a Chinese restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 4\",\n      \"activities\": [\n        {\n          \"activity\": \"Visit Singapore Zoo\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Lunch at a local food court\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Visit Night Safari\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a Thai restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 5\",\n      \"activities\": [\n        {\n          \"activity\": \"Visit Pulau Ubin Island\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Explore the island on a bike\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Lunch at a local seafood restaurant\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Visit Chek Jawa Wetlands\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a local Indian restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 6\",\n      \"activities\": [\n        {\n          \"activity\": \"Visit MacRitchie Reservoir\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Go for a nature walk\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Lunch at a local food court\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Visit Haw Par Villa\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a local Malay restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 7\",\n      \"activities\": [\n        {\n          \"activity\": \"Visit Jurong Bird Park\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Lunch at a local food court\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Visit Singapore Flyer\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a local Chinese restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 8\",\n      \"activities\": [\n        {\n          \"activity\": \"Visit Clarke Quay\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Lunch at a local food court\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Explore the area\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a local seafood restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 9\",\n      \"activities\": [\n        {\n          \"activity\": \"Visit Chinatown\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Lunch at a local food court\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Explore the area\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Dinner at a local Chinese restaurant\",\n          \"time\": \"\"\n        }\n      ]\n    },\n    {\n      \"day\": \"Day 10\",\n      \"activities\": [\n        {\n          \"activity\": \"Check-out from the hotel\",\n          \"time\": \"\"\n        },\n        {\n          \"activity\": \"Departure from Singapore\",\n          \"time\": \"\"\n        }\n      ]\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "relaxedSchedule",
+              "value": "true",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "d7f87e62-2328-455d-8c53-b0798b1f2094",
+          "body": "{\r\n    \"plan\": [\r\n        {\r\n            \"day\": \"Day 1: 20th Friday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Depart from Singapore to Maldives\",\r\n                    \"time\": \"9:30 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 2: 21st Saturday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Arrive in Maldives\",\r\n                    \"time\": \"1:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Check-in at the hotel\",\r\n                    \"time\": \"2:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Explore the island and enjoy the beach\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Lunch\",\r\n                    \"time\": \"12:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Snorkeling and diving activities\",\r\n                    \"time\": \"1:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Sunset cruise\",\r\n                    \"time\": \"6:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Dinner\",\r\n                    \"time\": \"8:00 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 3: 22nd Sunday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Island hopping tour\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Lunch\",\r\n                    \"time\": \"12:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Relax on the beach\",\r\n                    \"time\": \"1:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Sunset fishing\",\r\n                    \"time\": \"6:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Dinner\",\r\n                    \"time\": \"8:00 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 4: 23rd Monday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Visit the local village and learn about the culture\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Lunch\",\r\n                    \"time\": \"12:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Spa and wellness activities\",\r\n                    \"time\": \"1:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Sunset yoga\",\r\n                    \"time\": \"6:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Dinner\",\r\n                    \"time\": \"8:00 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 5: 24th Tuesday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Snorkeling and diving activities\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Lunch\",\r\n                    \"time\": \"12:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Relax on the beach\",\r\n                    \"time\": \"1:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Sunset dolphin watching\",\r\n                    \"time\": \"6:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Dinner\",\r\n                    \"time\": \"8:00 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 6: 25th Wednesday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Visit the nearby islands\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Lunch\",\r\n                    \"time\": \"12:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Water sports activities\",\r\n                    \"time\": \"1:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Sunset kayaking\",\r\n                    \"time\": \"6:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Dinner\",\r\n                    \"time\": \"8:00 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 7: 26th Thursday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Visit the coral reefs\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Lunch\",\r\n                    \"time\": \"12:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Relax on the beach\",\r\n                    \"time\": \"1:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Sunset sailing\",\r\n                    \"time\": \"6:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Dinner\",\r\n                    \"time\": \"8:00 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 8: 27th Friday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Snorkeling and diving activities\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Lunch\",\r\n                    \"time\": \"12:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Spa and wellness activities\",\r\n                    \"time\": \"1:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Sunset beach volleyball\",\r\n                    \"time\": \"6:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Dinner\",\r\n                    \"time\": \"8:00 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 9: 28th Saturday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Visit the sandbank\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Lunch\",\r\n                    \"time\": \"12:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Relax on the beach\",\r\n                    \"time\": \"1:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Sunset barbecue\",\r\n                    \"time\": \"6:00 PM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Dinner\",\r\n                    \"time\": \"8:00 PM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"day\": \"Day 10: 29th Sunday\",\r\n            \"activities\": [\r\n                {\r\n                    \"activity\": \"Breakfast\",\r\n                    \"time\": \"8:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Check-out from the hotel\",\r\n                    \"time\": \"9:00 AM\"\r\n                },\r\n                {\r\n                    \"activity\": \"Depart from Maldives to Singapore\",\r\n                    \"time\": \"11:00 AM\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "relaxedSchedule",
+              "value": "false",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "56fa8419-7857-4df4-bbb2-ceb5586fee27",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "travel/modes",
+      "responses": [
+        {
+          "uuid": "9cdc0d24-35aa-4d51-8857-05df7c2b58df",
+          "body": "{\n  \"modes_of_travel\": [\n    \"flight\",\n    \"cruise\"\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -398,6 +487,14 @@
     {
       "type": "route",
       "uuid": "6b5190af-090c-4a59-bd14-20d9c8610cd1"
+    },
+    {
+      "type": "route",
+      "uuid": "55098280-20c3-4a23-ac4a-7bb2986d0486"
+    },
+    {
+      "type": "route",
+      "uuid": "56fa8419-7857-4df4-bbb2-ceb5586fee27"
     }
   ],
   "proxyMode": false,
@@ -437,7 +534,7 @@
       "id": "alua",
       "name": "categories",
       "documentation": "categories data",
-      "value": "[\n            {\n                \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH2\",\n                \"category\": \"Beach\",\n                \"isPopularDestination\":true\n            },\n            {\n                \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH3\",\n                \"category\": \"Ocean\",\n                \"isPopularDestination\":true\n            }\n]"
+      "value": "[\n            {\n                \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH2\",\n                \"category\": \"Beach\"\n            },\n            {\n                \"catogoryId\": \"fetKit5DOgWpT92bz3kkWH3\",\n                \"category\": \"Ocean\"\n            }\n]"
     },
     {
       "uuid": "eb795b94-e72d-4a69-b11b-c0924a19a2c8",
